@@ -1,61 +1,11 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+The project was created using PHP Laravel framework and ESP 32. The databased to maintaining the data from ESP is using MySQL This project was created with the aim of monitoring the capacity of the trash can with an Ultrasonic sensor to determine the height of the trash can capacity. The data obtained by the Ultrasonic sensor will be sent with ESP 32 to the MySQL database that has been created. Then the values of the data will be sent to the webserver which will be displayed by the Laravel framework. Therefore, before creating this project. Friends are requested to ensure that all components and applications needed are installed and available.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+First, to run the project, you need to install XAMPP, Arduino IDE, and Composer to your Computer. After that, you need to install the ESP 32 library into the Arduino IDE. Then make sure that the jquery folder for website display is also installed. The jquery file can be seen in the public/jquery folder.
 
-## About Laravel
+Then, you need to download the file named "iotproject" and extracted and copy to your folder xampp/htdocs.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+After all components and application setup have been successful. The first thing that needs to be done is to change the wifi username and password initialization code according to the your username and password Wifi, then replace the serverName IP in the Arduino code with each friend's static IP. After that, friends are asked to run apache and mysql in the xampp application. After successfully running apache and mysql, the next step is to run the command prompt and enter the following command: 1. cd / 2. cd xampp 3. cd htdocs 4. cd iotproject 5. php artisan serve After doing these commands, the next step is uploading the Arduino IDE code to the ESP32 port. Keep in mind, some computers require port driver installation so that the port cable connected to the ESP is successful. If the file uploading fails, it is most likely that your computer needs to install a port driver. How to install the port driver can be seen through the following youtube link: https://youtu.be/eXF17uDvLj0?si=4HLXWz93gkvIBgEJ
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+After successfully installing the driver, the last step is uploading the Arduino code to the ESP 32, and running the localhost:8000 webserver to see the dashboard display of the Ultrasonic sensor.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Thank you, Ivan David
